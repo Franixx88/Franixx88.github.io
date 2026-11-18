@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Roman Sidorenko — Descend</title>
+  <meta name="description" content="Roman Sidorenko. 16. C/C++ developer and chess National Master from Ukraine.">
+  <meta name="theme-color" content="#02030a">
+  <meta property="og:title" content="Roman Sidorenko — Descend">
+  <meta property="og:description" content="C/C++ developer. Chess National Master. Follow the chain.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2302030a'/%3E%3Cellipse cx='16' cy='11' rx='5' ry='7' fill='none' stroke='%238af5ff' stroke-width='2.4'/%3E%3Cellipse cx='16' cy='21' rx='2.2' ry='7' fill='none' stroke='%23b18cff' stroke-width='2.4'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/addons/"
+    } }
+  </script>
+</head>
+<body>
+  <canvas id="abyss" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div id="loader" role="status">
+    <div class="loader-ring"></div>
+    <p class="mono">establishing signal<span class="dots"></span></p>
+  </div>
+
+  <header class="hud mono" aria-hidden="true">
+    <div class="hud-left"><span class="hud-mark">R·S</span><span class="hud-sep">//</span><span id="hud-sector">SECTOR 00 · SURFACE</span></div>
+    <div class="hud-right">DEPTH <span id="hud-depth">0000</span> m</div>
+  </header>
+  <div class="rail" aria-hidden="true"><div class="rail-fill" id="rail-fill"></div></div>
+
+  <main id="content">
+    <section id="intro" class="panel-wrap center" data-sector="SECTOR 00 · SURFACE"></section>
+    <section id="code" class="panel-wrap left" data-sector="SECTOR 01 · THE MACHINE"></section>
+    <section id="chess" class="panel-wrap right" data-sector="SECTOR 02 · THE BOARD"></section>
+    <section id="contact" class="panel-wrap center bottom" data-sector="SECTOR 03 · THE CORE"></section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
